@@ -1,6 +1,6 @@
 # IDEATE Facebook Cover Image Generator
 
-This is a simple web app to generate a cover image for [IDEATE Facebook Page](https://fb.com/ideateessex).
+This is a [simple web app](http://ideatefbimgs.herokuapp.com/) to generate a cover image for [IDEATE Facebook Page](https://fb.com/ideateessex).
 
 ## License
 
