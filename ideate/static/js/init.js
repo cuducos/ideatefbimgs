@@ -29,7 +29,7 @@ function preview() {
     c = $('#color').val();
 
     // if values are blank, replace by default
-    if (v == '') v = Math.floor(Math.random()*41)
+    if (v == '') v = $('#volume').attr('placeholder');
     if (y == '') y = $('#year').attr('placeholder');
     if (s == '') s = $('#season').attr('placeholder');
     if (c == '') c = '#0000ff';
@@ -45,7 +45,7 @@ function preview() {
 
 function create_url(v, y, s, c) {
     base_url = $('form').attr('action');
-    url = base_url + '?volume=' + encodeURIComponent(v);
+    url = base_url + '?volume=' + encodeURIComponent(v.substr(-2,2));
     url = url + '&season=' + encodeURIComponent(s);
     url = url + '&year=' + encodeURIComponent(y);
     url = url + '&color=' + encodeURIComponent(c);
