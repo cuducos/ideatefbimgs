@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>IDEATE Facebook Cover Image Generator</title>
+        <meta name="description" content="A simple script to generate IDEATE journal cover image for its Facebook page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- skeleton -->
+        <link rel="stylesheet" href="/static/skeleton/base.css">
+        <link rel="stylesheet" href="/static/skeleton/skeleton.css">
+        <link rel="stylesheet" href="/static/skeleton/layout.css">
+
+        <!-- jquery -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <!-- color picker -->
+        <link rel="stylesheet" media="screen" type="text/css" href="/static/colorpicker/css/colorpicker.css" />
+        <script type="text/javascript" src="/static/colorpicker/js/colorpicker.js"></script>
+
+        <!-- ideate app -->
+        <link rel="stylesheet" href="/static/css/style.css">
+        <script type="text/javascript" src="/static/js/init.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <header class="sixteen columns">
+                <h1>IDEATE Facebook Cover Image Generator</h1>
+            </header>
+            <section class="six columns clearfix">
+                <article>
+                    <form name="settings" method="get" action="/download">
+                        <h2>Badge info</h2>
+                        {% for field in fields %}
+                        <label for="{{ field[0] }}">{{ field[1] }}</label>
+                        <input type="text" name="{{ field[0] }}" id="{{ field[0] }}" value="{{ field[2] }}" placeholder="{{ ph[field[0]] }}" />
+                        {% endfor %}
+                        <input type="submit" name="submit" id="submit" value="Download" />
+                    </form>
+                </article>
+            </section>
+            <aside class="ten columns">
+                <div id="preview">
+                     <h3>Cover Preview</h3>
+                </div>
+                <div id="other">
+                     <h3>Other images</h3>
+                     <p>
+                        <a href="/static/imgs/Profile.png">Profile</a> |
+                        <a href="/static/imgs/How.png">How to be published</a> |
+                        <a href="/static/imgs/Editorial.png">Meet the editorial team</a>
+                    </p>
+                </div>
+                <h3>About IDEATE</h3>
+                <p>
+                    <a href="https://www.essex.ac.uk/sociology/research/publications/student_journals/ug/">IDEATE Journal</a> |
+                    <a href="https://fb.com/ideateessex">Facebook</a> |
+                    <a href="https://twitter.com/EssexIDEATE">Twitter</a>
+                </p>
+            </aside>
+        </div>
+    </body>
+</html>
