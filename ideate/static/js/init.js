@@ -34,6 +34,9 @@ function preview() {
     if (s == '') s = $('#season').attr('placeholder');
     if (c == '') c = '#0000ff';
 
+    // filter volume
+    v = v.replace(/[^0-9]/g, '')
+
     // create image
     p = $('#preview');
     if ($('img', p).length == 0) p.append('<img />');
@@ -45,7 +48,7 @@ function preview() {
 
 function create_url(v, y, s, c) {
     base_url = $('form').attr('action');
-    url = base_url + '?volume=' + encodeURIComponent(v.substr(-2,2));
+    url = base_url + '?volume=' + encodeURIComponent(v);
     url = url + '&season=' + encodeURIComponent(s);
     url = url + '&year=' + encodeURIComponent(y);
     url = url + '&color=' + encodeURIComponent(c);
