@@ -14,6 +14,12 @@ vim
 flask/
 venv/
 
+# vagrant
+.idea
+
+# pycharm
+.vagrant
+
 # os generated files
 .DS_Store
 .DS_Store?
