@@ -29,10 +29,13 @@ function preview() {
     c = $('#color').val();
 
     // if values are blank, replace by default
-    if (v == '') v = Math.floor(Math.random()*41)
+    if (v == '') v = $('#volume').attr('placeholder');
     if (y == '') y = $('#year').attr('placeholder');
     if (s == '') s = $('#season').attr('placeholder');
     if (c == '') c = '#0000ff';
+
+    // filter volume
+    v = v.replace(/[^0-9]/g, '')
 
     // create image
     p = $('#preview');

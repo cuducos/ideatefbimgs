@@ -5,4 +5,4 @@ This is a [simple web app](http://ideatefbimgs.herokuapp.com/) to generate a cov
 ## License
 
 Copyright (c) 2014 Eduardo Cuducos
-Licensed under the MIT license (see [LICENSE file](https://github.com/cuducos/ideatefbimgs/raw/master/LICENSE))
+Licensed under the MIT license (see [LICENSE file](https://github.com/cuducos/ideatefbimgs/raw/master/LICENSE)).
